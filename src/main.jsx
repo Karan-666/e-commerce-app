@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <Checkout />,
       },
       {
-        path: '*', // The 404 page is also a child of the layout.
+        path: '*', // This is the error page, It is also child of the layout. '*' mean any other route.
         element: <NotFound />,
       },
     ],
