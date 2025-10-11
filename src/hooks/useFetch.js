@@ -33,7 +33,9 @@ function UseFetch(url) {
 
         // saving api data to state variable
         // saving response in jsonData.products as the dummyJson API return product in key named "products"
-        setData(jsonData.products); 
+        //Set the data to jsonData.products. If that is undefined (which it will be for a single product), then set the data to jsonData itself.
+        //We check if the response has a 'products' key. If it does, it's a list. If not, it's a single product.
+        setData(jsonData.products || jsonData);
         setError(null);
       } catch (err) { 
         // we catch the error here and save it to error state
