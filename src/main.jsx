@@ -10,6 +10,9 @@ import ProductDetail from './components/ProductDetail.jsx';
 import Cart from './components/Cart.jsx';
 import Checkout from './components/Checkout.jsx';
 import NotFound from './components/NotFound.jsx';
+import {Provider} from 'react-redux';
+import appStore from './utils/appStore.js';
+
 
 // We define an array of routes. Each object in this array represents one page.
 const router = createBrowserRouter([
@@ -46,6 +49,8 @@ const router = createBrowserRouter([
 // This is the correct way to set up routing as per the assignment's instructions.
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+   <Provider store={appStore}>
     <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 );
