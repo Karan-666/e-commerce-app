@@ -35,9 +35,7 @@ function ProductList() {
         {/* Looping through each product using map */}
         
         {products.map((item) => (
-          <Link to={`product/${item.id}`} key={item.id}>
-          <ProductItem product={item} />
-          </Link>
+          <ProductItem product={item} key={item.id} />
         ))}
         
       </div>

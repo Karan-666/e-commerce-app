@@ -66,7 +66,7 @@ const cartSlice = createSlice({
       );
       // decreasing its quantity to 1.
       if (decreasedProduct) {
-        decreasedProduct--;
+        decreasedProduct.quantity--;
       }
     },
   },

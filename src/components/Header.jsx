@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
 
 function Header() {
+
+  const cartItem = useSelector(store => store.cart.items);
+
   return (
     // This is our main header tag.
     <header className="bg-gray-800 text-white p-4">
@@ -26,7 +30,7 @@ function Header() {
             </li>
             <li>
               <Link to="/cart" className="hover:text-gray-300">
-                Cart
+                Cart - {cartItem.length}
               </Link>
             </li>
             <li>
