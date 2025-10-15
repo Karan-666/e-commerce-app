@@ -5,13 +5,26 @@ import App from './App.jsx'
 
 // We import the new functions for creating our router.
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ProductList from './components/ProductList.jsx';
-import ProductDetail from './components/ProductDetail.jsx';
-import Cart from './components/Cart.jsx';
-import Checkout from './components/Checkout.jsx';
-import NotFound from './components/NotFound.jsx';
+
 import {Provider} from 'react-redux';
 import appStore from './utils/appStore.js';
+import {lazy} from 'react';
+
+// normal imports
+// import ProductList from './components/ProductList.jsx';
+// import ProductDetail from './components/ProductDetail.jsx';
+// import Cart from './components/Cart.jsx';
+// import Checkout from './components/Checkout.jsx';
+// import NotFound from './components/NotFound.jsx';
+
+// lazy loaded imports
+const ProductList = lazy(()=> import('./components/ProductList.jsx'));
+const ProductDetail = lazy(() => import('./components/ProductDetail.jsx'));
+const Cart = lazy(() => import('./components/Cart.jsx'));
+const Checkout = lazy(() => import('./components/Checkout.jsx'));
+const NotFound = lazy(() => import('./components/NotFound.jsx')); 
+
+
 
 
 // We define an array of routes. Each object in this array represents one page.
