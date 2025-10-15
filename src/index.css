@@ -5,7 +5,7 @@ body {
   /* We set the background to a very light gray. */
   /* background-color: #f7f7f7; */
   /* We are using a linear gradient to create a smooth transition between colors. */
-  background-image: linear-gradient(to top right, #f7f7f7, #F4F0FF);
+  background-image: linear-gradient(to top right, #f7f7f7, #EDE7FF);
   /* We set the text to a very dark black for good contrast and readability. */
-  color: #333333;
+  color: #0F1724;
 }

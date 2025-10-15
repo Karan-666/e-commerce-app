@@ -10,7 +10,7 @@ function Header() {
 
   return (
     // This is our main header tag.
-   <header className="bg-gray-950 text-white p-4 fixed top-0 left-0 w-full z-50">
+   <header className="bg-slate-950 text-white p-4 fixed top-0 left-0 w-full z-50">
       {/* This is a container to keep our content neatly centered on the page. */}
       {/* 'mx-auto' centers the container horizontally. */}
       {/* 'justify-between' puts space between the items (like the title and the navigation). */}
