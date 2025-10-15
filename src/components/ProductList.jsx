@@ -47,7 +47,7 @@ function ProductList() {
   )
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-15 py-5">
       <h1 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-900 to-purple-600">Shop Smart
         <p className="text-lg">Curated essentials for everyday life</p>
       </h1>
