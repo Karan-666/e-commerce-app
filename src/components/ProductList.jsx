@@ -48,13 +48,16 @@ function ProductList() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Products</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-purple-600">Shop Smart
+        <p className="text-lg">Curated essentials for everyday life</p>
+      </h1>
+      
       {/* Search bar */}
-      <div className="mb-6">
+         <div className="max-w-md mx-auto mb-6">
         <input
           type="text"
           placeholder="Search for products..."
-          className="w-full p-2 border border-gray-300 rounded-md"
+          className="w-full p-2 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
           value={searchQuery}
           onChange={(e) => dispatch(setSearchQuery(e.target.value))}
         />

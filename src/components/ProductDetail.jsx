@@ -30,7 +30,7 @@ function ProductDetail() {
       <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         {/* We display the main product image. */}
         <img
-          src={product.thumbnail}
+          src={product.images[0]}
           alt={product.title}
           loading="lazy"
           className="md:w-1/2 w-full h-auto object-cover"

@@ -32,6 +32,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <NotFound />,
     // This is where we define our child routes. They will all be rendered inside the <Outlet> of the App component.
     children: [
       {
@@ -49,10 +50,6 @@ const router = createBrowserRouter([
       {
         path: '/checkout',
         element: <Checkout />,
-      },
-      {
-        path: '*', // This is the error page, It is also child of the layout. '*' mean any other route.
-        element: <NotFound />,
       },
     ],
   },
