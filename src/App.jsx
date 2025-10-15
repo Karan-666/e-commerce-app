@@ -10,7 +10,7 @@ function App() {
       <Header />
       
       {/* The <Outlet> component will render the specific page that matches the URL, like ProductList or Cart. */}
-      <main>
+      <main className='mt-15'>
         <Suspense fallback={<div className="text-center p-10">Loading page...</div>}>
         <Outlet />
         </Suspense>

@@ -33,7 +33,7 @@ function Cart() {
         ))}
       </div>
      {/* This is the checkout button. */}
-      <div className="mt-8 text-right">
+      <div className="mt-8 text-right mb-15">
         <Link 
           to="/checkout" 
           className="bg-green-500 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-green-600"

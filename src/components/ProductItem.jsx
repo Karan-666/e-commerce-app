@@ -37,7 +37,7 @@ function ProductItem({product}) {
  return (
     // We wrap the entire card in a single div to keep it all together.
      <div
-      className="bg-white rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105"
+      className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300 hover:z-10  bg-gradient-to-br from-slate-850 to-purple-400 border border-slate-700"
       onMouseEnter={handleMouseEnter} // We add the mouse hover event.
       onMouseLeave={handleMouseLeave} // We add the mouse leave event.
     >
