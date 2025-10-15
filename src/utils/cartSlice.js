@@ -69,6 +69,11 @@ const cartSlice = createSlice({
         decreasedProduct.quantity--;
       }
     },
+
+    clearCart : (state , action) => {
+      // empty the array by setting its length property to 0.
+      state.items.length = 0;
+    }
   },
 });
 
@@ -76,4 +81,4 @@ const cartSlice = createSlice({
 export default cartSlice.reducer;
 
 // exporting actions with named exports to be used in component with dispatcher function
-export const {addItem, removeItem, increaseQuantity, decreaseQuantity} = cartSlice.actions;
+export const {addItem, removeItem, increaseQuantity, decreaseQuantity, clearCart} = cartSlice.actions;

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { clearCart } from "../utils/cartSlice";
 
 function Checkout() {
   // We get the items from the cart to show a summary.
@@ -23,6 +24,9 @@ function Checkout() {
 
   // The assignment requirement: to display a message and empty the cart.
   function handlePlaceOrder() {
+    // clearing the cart
+    dispatch(clearCart());
+    // showing a success message
     alert("Order placed successfully!");
     // Navigate the user back to the home page.
     navigate("/");
