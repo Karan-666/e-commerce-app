@@ -4,11 +4,16 @@ import { increaseQuantity } from "../utils/cartSlice";
 import { decreaseQuantity } from "../utils/cartSlice";
 import { removeItem } from "../utils/cartSlice";
 
-function CartItem({ cartItems }) {
+function CartItem({ item }) {
+
+
   const dispatch = useDispatch();
 
   function handleDecrease(id) {
-    dispatch(decreaseQuantity(id));
+    if(item.quantity > 0)
+      dispatch(decreaseQuantity(id));
+    else
+      dispatch(removeItem(id));
   }
 
   function handleIncrease(id) {
