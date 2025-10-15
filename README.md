@@ -1,16 +1,40 @@
-# React + Vite
+Github repo link: https://github.com/Karan-666/e-commerce-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ShoppyGlobe E-commerce Application
 
-Currently, two official plugins are available:
+## Project Description
+This is a modern e-commerce application built from scratch with React. It features a responsive design, a product listing page, a product details page, a shopping cart, and a checkout flow. The application demonstrates a solid understanding of a component-based architecture and advanced state management techniques.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Modern UI:** Clean, responsive design with a fixed header, modern fonts, and subtle animations.
+- **Product Listing:** Fetches and displays products from an external API (`https://dummyjson.com/products`).
+- **Dynamic Routing:** Implements client-side routing to navigate between pages without full page reloads.
+- **Shopping Cart:** Users can add, remove, and adjust the quantity of products in the cart, with all logic managed by Redux.
+- **Search Functionality:** Filters products in real-time by title and description using Redux state.
+- **Performance Optimization:** Utilizes code splitting with `React.lazy()` and `Suspense`, as well as native image lazy loading for a faster user experience.
 
-## React Compiler
+## Technologies Used
+- **React:** For building the user interface.
+- **Vite:** For a fast and efficient development environment.
+- **React Router DOM:** For handling all application routes.
+- **Redux Toolkit:** For centralized and predictable state management.
+- **Tailwind CSS:** For fast and flexible styling.
+- **react-icons:** For modern, professional-looking icons.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run the Project Locally
+1.  **Clone the repository:**
+    ```bash
+    git clone [Your-GitHub-Repo-Link-Here]
+    ```
+2.  **Navigate into the project directory:**
+    ```bash
+    cd shoppy-globe
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
