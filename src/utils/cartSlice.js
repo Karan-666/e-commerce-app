@@ -16,6 +16,8 @@ const cartSlice = createSlice({
   // starting value of cart, an empty array
   initialState: {
     items: [],
+  // Added a new property to hold our search query.
+  searchQuery: '',
   },
   // Inside reducers, we will add functions to change cart state
   reducers: {
@@ -50,29 +52,36 @@ const cartSlice = createSlice({
 
     increaseQuantity: (state, action) => {
       // finding the object to modify
-      const increasedProduct = state.items.find(
+      const item = state.items.find(
         (item) => item.id === action.payload
       );
       // increasing its quantity to 1.
-      if (increasedProduct) {
-        increasedProduct.quantity = increasedProduct.quantity + 1;
+      if (item) {
+        item.quantity = item.quantity + 1;
       }
     },
 
     decreaseQuantity: (state, action) => {
       // finding the object to modify
-      const decreasedProduct = state.items.find(
+      const item = state.items.find(
         (item) => item.id === action.payload
       );
-      // decreasing its quantity to 1.
-      if (decreasedProduct) {
-        decreasedProduct.quantity--;
+      // if quantity is 1, remove product
+      if (item.quantity === 1) {
+        state.items = state.items.filter((item) => item.id !== action.payload);
+      }
+      else{
+        item.quantity--;
       }
     },
 
     clearCart : (state , action) => {
       // empty the array by setting its length property to 0.
       state.items.length = 0;
+    },
+
+    setSearchQuery: (state, action) => {
+      state.searchQuery = action.payload;
     }
   },
 });
@@ -81,4 +90,4 @@ const cartSlice = createSlice({
 export default cartSlice.reducer;
 
 // exporting actions with named exports to be used in component with dispatcher function
-export const {addItem, removeItem, increaseQuantity, decreaseQuantity, clearCart} = cartSlice.actions;
+export const {addItem, removeItem, increaseQuantity, decreaseQuantity, clearCart, setSearchQuery } = cartSlice.actions;

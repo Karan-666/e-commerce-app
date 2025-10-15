@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import { Outlet } from 'react-router-dom'; // We import Outlet, which is a placeholder for our page content.
-
+import { Suspense } from 'react';
 
 function App() {
   return (
