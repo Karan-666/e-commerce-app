@@ -57,7 +57,7 @@ function ProductItem({product}) {
 
       {/* The "Add to Cart" button is outside the Link so it doesn't navigate. */}
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 cursor-pointer"
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 cursor-pointer active:bg-blue-700 transition-all duration-150"
         onClick={handleAddItem}
       >
         Add to Cart
