@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* We are adding styles to the body tag to set the theme for the entire application. */
+body {
+  /* We set the background to a very light gray. */
+  background-color: #f7f7f7;
+  /* We set the text to a very dark black for good contrast and readability. */
+  color: #333333;
+}
