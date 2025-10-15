@@ -23,6 +23,7 @@ function ProductItem({product}) {
         <img
           src={product.thumbnail}
           alt={product.title}
+          loading="lazy" // added for lazy loading of image
           className="w-full h-48 object-cover rounded-md mb-4"
         />
         <h2 className="text-xl font-semibold mb-2">{product.title}</h2>

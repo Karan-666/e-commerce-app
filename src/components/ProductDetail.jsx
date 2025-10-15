@@ -32,6 +32,7 @@ function ProductDetail() {
         <img
           src={product.thumbnail}
           alt={product.title}
+          loading="lazy"
           className="md:w-1/2 w-full h-auto object-cover"
         />
         {/* This div will hold all the product's text details. */}
