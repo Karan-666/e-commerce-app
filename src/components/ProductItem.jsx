@@ -17,7 +17,7 @@ function ProductItem({product}) {
 
  return (
     // We wrap the entire card in a single div to keep it all together.
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
       {/* We wrap the image and title in a Link component. The "to" prop uses the product's ID. */}
       <Link to={`/product/${product.id}`}>
         <img
